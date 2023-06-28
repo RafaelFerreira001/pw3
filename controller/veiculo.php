@@ -17,6 +17,10 @@ switch($method){
                 $veiculos = $veiculo->consultarPorId($id);
                 $viewVeiculo ->listarVeiculosID($veiculos);
             }
+            else{
+                $veiculos = $veiculo->consultar();
+                $viewVeiculo->listarVeiculos($veiculos);
+            }
         }
         else{
             $veiculos = $veiculo->consultar();

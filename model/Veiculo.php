@@ -98,22 +98,6 @@ class Veiculo {
     }
 
 
-    private function carregar(Veiculo $v){
-        $this->id             = $v->id;
-        $this->modelo         = $v->modelo;
-        $this->ano_fabricacao = $v->ano_fabricacao;
-        $this->ano_modelo     = $v->ano_modelo;
-        $this->cor            = $v->cor;
-        $this->num_portas     = $v->num_portas;
-        $this->foto           = $v->foto;
-        $this->categoria_id   = $v->categoria_id;
-        $this->montadora_id   = $v->montadora_id;
-        $this->tipo_cambio    = $v->tipo_cambio;
-        $this->tipo_direcao   = $v->tipo_direcao;
-        $this->data_cadastro  = $v->data_cadastro;
-        $this->data_alteracao = $v->data_alteracao;
-    }
-
     public function consultarPorId($id) {
         try {
             $cmdSql = "SELECT * FROM veiculo WHERE veiculo.id = :id";
